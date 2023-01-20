@@ -241,3 +241,74 @@ CREATE TABLE covers (
     game_url varchar,
     league_year varchar
 );
+
+### Basketball Reference Standings
+CREATE TABLE dfc_br_standings (
+    team varchar NOT NULL,
+    date varchar NOT NULL,
+    wins int4,
+    losses int4,
+    win_perc float4,
+    points_scored_per_game float4,
+    points_allowed_per_game float4,
+    expected_wins float4,
+    expected_losses float4
+);
+
+### Basketball Reference Team Stats
+CREATE TABLE dfc_br_team_stats (
+    team varchar NOT NULL,
+    date varchar NOT NULL,
+    g int4,
+    mp int4,
+    fg int4,
+    fga int4,
+    fg_pct float4,
+    fg3 int4,
+    fg3a int4,
+    fg3_pct float4,
+    fg2 int4,
+    fg2a int4,
+    fg2_pct float4,
+    ft int4,
+    fta int4,
+    ft_pct float4,
+    orb int4,
+    drb int4,
+    trb int4,
+    ast int4,
+    stl int4,
+    blk int4,
+    tov int4,
+    pf int4,
+    pts int4
+);
+
+### Basketball Reference Opponent Stats
+CREATE TABLE dfc_br_opponent_stats (
+    team varchar NOT NULL,
+    date varchar NOT NULL,
+    opp_g int4,
+    opp_mp int4,
+    opp_fg int4,
+    opp_fga int4,
+    opp_fg_pct float4,
+    opp_fg3 int4,
+    opp_fg3a int4,
+    opp_fg3_pct float4,
+    opp_fg2 int4,
+    opp_fg2a int4,
+    opp_fg2_pct float4,
+    opp_ft int4,
+    opp_fta int4,
+    opp_ft_pct float4,
+    opp_orb int4,
+    opp_drb int4,
+    opp_trb int4,
+    opp_ast int4,
+    opp_stl int4,
+    opp_blk int4,
+    opp_tov int4,
+    opp_pf int4,
+    opp_pts int4
+);
